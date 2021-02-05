@@ -8,6 +8,7 @@ export const availableLangs = {
   en: 'English',
   'en-gt': 'English (Google Translated through Chinese)',
   es: 'español',
+  hi: 'हिंदी',
   fr: 'français',
   'en-bg': 'Engrish',
   test: 'le language test',
@@ -16,7 +17,7 @@ export const availableLangs = {
 
 export const publicLangs = /(?:\?|&)all-langs/.exec(window.location.search)
   ? Object.keys(availableLangs)
-  : ['en', 'en-gt', 'fr']
+  : ['en', 'en-gt', 'fr', 'hi']
 if (!availableLangs[cookie.getItem('[gunn-web-app] language')]) {
   let lang = 'en'
   if (navigator.languages) {
